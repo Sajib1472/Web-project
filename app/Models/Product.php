@@ -27,4 +27,9 @@ class Product extends Model
                 ->orWhere('description', 'like', '%' . request('search') . '%');
         }
     }
+
+    public function carts()
+    {
+        return $this->hasMany(Cart::class);
+    }
 }

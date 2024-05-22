@@ -2,8 +2,9 @@
   
 namespace App\Http\Controllers;
   
-use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Customer;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -69,5 +70,17 @@ class AuthController extends Controller
     public function profile()
     {
         return view('profile');
+    }
+
+    public function update_password(Request $request, Customer $customer)
+    {
+        $request->validate([
+            'password' => 'required|string|min:8|confirmed',
+        ]);
+
+        $customer->password = Hash::make($request->password);
+        $customer->save();
+
+        return redirect()->back()->with('success', 'Password updated successfully.');
     }
 }

@@ -38,7 +38,7 @@
                               <a href="/ships/{{ $product->id }}" class="option1">
                               Details
                               </a>
-                              <a href="" class="option2">
+                              <a href="/checkout/{{ $product->id }}" class="option2">
                               Buy Now
                               </a>
                            </div>
@@ -64,6 +64,9 @@
                </a>
             </div> --}}
          </div>
+         {{-- <div class="col-sm-6 col-md-4 col-lg-4">
+            {{ $products->links()}}
+         </div> --}}
       </section>
       <!-- end product section -->
 

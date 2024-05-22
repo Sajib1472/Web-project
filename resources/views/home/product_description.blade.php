@@ -127,7 +127,7 @@
                 <p class="no-logo">No image available</p>
                 @endif
 
-                <a href="#" class="buy-btn">Buy Now</a>
+                <a href="/checkout/{{ $product->id }}" class="buy-btn">Buy Now</a>
             </div>
                
         </body>

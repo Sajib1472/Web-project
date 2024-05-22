@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        User::factory(5)->create();
+        // User::factory(5)->create();
 
         // Product::factory(10)->create();
 
@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
             'location' => 'Miami, FL',
             'email' => 'contact@oceanicventures.com',
             'description' => 'A luxurious yacht with modern amenities and a sleek design, perfect for leisure and business trips on the sea.',
-            'price' => 5000000,
+            'price' => 500000,
         ]);
         
         Product::create([
@@ -76,7 +76,7 @@ class DatabaseSeeder extends Seeder
             'location' => 'New York, NY',
             'email' => 'shipping@globalshipping.com',
             'description' => 'A large cargo ship designed for transporting goods across oceans with maximum efficiency and safety.',
-            'price' => 15000000,
+            'price' => 150000,
         ]);
         
         Product::create([
@@ -86,7 +86,7 @@ class DatabaseSeeder extends Seeder
             'location' => 'Fort Lauderdale, FL',
             'email' => 'bookings@luxurycruises.com',
             'description' => 'A magnificent cruise ship offering world-class amenities and unforgettable travel experiences.',
-            'price' => 80000000,
+            'price' => 800000,
         ]);
         
         Product::create([
@@ -96,7 +96,7 @@ class DatabaseSeeder extends Seeder
             'location' => 'San Francisco, CA',
             'email' => 'explore@submarineventures.com',
             'description' => 'A state-of-the-art submarine designed for deep-sea exploration and scientific research.',
-            'price' => 25000000,
+            'price' => 250000,
         ]);
         
         Product::create([
@@ -116,7 +116,7 @@ class DatabaseSeeder extends Seeder
             'location' => 'Boston, MA',
             'email' => 'info@oceanresearch.org',
             'description' => 'A highly specialized research vessel designed for conducting oceanographic and marine biology studies.',
-            'price' => 22000000,
+            'price' => 220000,
         ]);
     }
 }

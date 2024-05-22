@@ -52,13 +52,31 @@
                                     </button>
                                 </form> --}}
 
-                                <li class="nav-item" id='logincss'>
-                                    <a class="btn btn-primary" href="#contact-section">Login</a>
+                                @auth('customer')
+                                <li class="nav-item">
+                                    <span class="nav-link">
+                                    Welcome {{auth()->guard('customer')->user()->name}}
+                                    </span>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="btn btn-success" href="#contact-section">Register</a>
+                                    <a href="{{route('cust.cart')}}" class="nav-link">History</a>
                                 </li>
-                                
+                                <li class="nav-item">
+                                    <form class="inline" method="POST" action="/customer_logout">
+                                    @csrf
+                                    <button type="submit">
+                                        <i class="fa-solid fa-door-closed"></i> Logout
+                                    </button>
+                                    </form>
+                                </li>
+                                @else
+                                <li class="nav-item" id='logincss'>
+                                    <a class="btn btn-primary" href="/customer_login">Login</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="btn btn-success" href="/customer_register">Register</a>
+                                </li>
+                                @endauth
                             </ul>
                         </div>
                     </nav>
@@ -82,7 +100,7 @@
                         <div class="information_f">
                         <p><strong>ADDRESS:</strong> 28 White tower, Street Name New York City, USA</p>
                         <p><strong>TELEPHONE:</strong> +91 987 654 3210</p>
-                        <p><strong>EMAIL:</strong> yourmain@gmail.com</p>
+                        <p><strong>EMAIL:</strong> bisw01as@gmail.com</p>
                         </div>
                     </div>
                 </div>
@@ -145,7 +163,7 @@
         <div class="cpy_">
             <p class="mx-auto">© 2021 All Rights Reserved By <a href="https://html.design/">Free Html Templates</a><br>
             
-            Distributed By <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
+            Distributed By <a href="https://themewagon.com/" target="_blank">Sajib Biswas</a>
             
             </p>
         </div>
